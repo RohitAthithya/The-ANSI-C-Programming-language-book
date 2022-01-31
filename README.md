@@ -1,0 +1,2 @@
+# The-ANSI-C-Programming-language-book
+Hey all, I have been trying to read the ever gold : The K&amp;R C book's latest version by the legendary authors themselves. I received motivation to read this from my teach' . I guess I will follow along the reading and uploading of respective code or learnings from a reading session i had.  Another motive of mine is to learn to use GitHub by doing this. I suppose it is fun =)
