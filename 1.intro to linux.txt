@@ -1,0 +1,52 @@
+LINUX notes for c programming:
+
+1. we open up the linux on virtual box
+2. We use the terminal to execute commands
+(IF YOU WANT TO GET OUT OF SOME EXECUTION ON THE TERMINAL => You press: ctrl+z)
+3. i created a folder on the desktop named "c programs" using the grpahical user interface itseld
+
+4. then i isntall some things
+5. sudo apt-get install gcc
+6. sudo apt update
+7. sudo apt autoremove
+
+
+--- now i had installed the gcc compilers, updated the machine and removed the overlapping or extra downloaded/installed files - not have gooten into the deeper meanings of these commands
+
+	also i tried executing a python file in linux
+
+	1. sudo apt-get python3
+
+	this updated my python3 files from the internet
+
+	2.gedit helloworld.py &
+
+	this willopen up the the helloworld.py (text file) 
+	i just typed the print("Hello world on linux")
+	and typed the following on terminal
+	3. python3 helloworld.py
+
+	i got the expected output!
+
+	shall we start doing some c programming
+
+ --- i used:
+ 1. gedit "hello world.c" &
+ 
+this opened up the text editor in the background, so i could edit the text file and input my c programs in it!
+
+then i started with doing the execercise programs.
+
+1. execute the helloworld programs while leaving out 1 and other parts and see what error we get
+
+for \c as an input to the printf's string
+it gives an error => unknown escape sequence!
+
+
+
+i found this thing on quora => where we save 4 files that are generated during the preprocessing->compilation->linking->loading
+it says to open the file named: filename.i
+1. gcc -save-temps filename.c
+
+https://stackoverflow.com/questions/21121787/do-comments-consume-memory-and-or-use-cycles
+give this a read!

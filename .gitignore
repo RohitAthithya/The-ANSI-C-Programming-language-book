@@ -1,0 +1,11 @@
+*.exe
+*.i
+*.o
+*.obj
+*.s
+*.jpg
+*.jpeg
+*.png
+tempCodeRunnerFile.c
+!*.c
+/.vscode/*

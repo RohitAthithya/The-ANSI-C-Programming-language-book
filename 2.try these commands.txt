@@ -1,0 +1,6 @@
+try these commands
+
+ - cd "(to directory)"
+ - mkdir "directory/folder name"
+ - gcc -save-temps "filename.c" 
+ - gcc -save-temps "filename.c" -o "outputname"
