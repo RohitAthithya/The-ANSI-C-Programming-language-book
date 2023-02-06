@@ -8,4 +8,4 @@
 *.png
 tempCodeRunnerFile.c
 !*.c
-/.vscode/*
+/.vscode

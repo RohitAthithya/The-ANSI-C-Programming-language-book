@@ -1,19 +1,18 @@
 /*Exercise 1-18. Write a program to remove trailing blanks and tabs from each line of
  input, and to delete entirely blank lines.*/
 
-#include<stdio.h>
-#include<stdint.h>
+#include <stdio.h>
+#include <stdint.h>
 
-#define CTRL(x) x & 0x1F 
+#define CTRL(x) (x & 0x1F)
 #define MAXLINE 1000
 
-
-int getLine();
-main()
+int getLine(char str[]);
+int main()
 {
     int c;
-    int string[MAXLINE];
-    while(getLine(string) > 0)
+    char string[MAXLINE];
+    while (getLine(string) > 0)
     {
         printf("%s", string);
     }
@@ -22,11 +21,14 @@ main()
 int getLine(char string[])
 {
     int chr = 0, i;
-    for(i = 0; (i < MAXLINE) && ( chr = getchar() )!='\n' && chr != CTRL('d') ; ++i)
+    // chr = getchar();
+    for (i = 0; (i < MAXLINE) && (chr = getchar()) != '\n' && chr != CTRL('d'); ++i)
     {
-        string[i] = chr;
+        if (chr != '\t')
+            string[i] = chr;
+        // if tabspace - do nothing
     }
-    if(chr == '\n')
+    if (chr == '\n' || chr == CTRL('d'))
     {
         string[i] = '\n';
         ++i;
@@ -36,11 +38,9 @@ int getLine(char string[])
     return i;
 }
 
-
-
 /* #include <stdio.h>
 #include <stdint.h>
-#define CTRL(x)  (x & 0x1F)   
+#define CTRL(x)  (x & 0x1F)
 #define MAXLINE 1000
 
 int getLine(char s[], int lim);
@@ -56,7 +56,7 @@ main()
         if(removeTrailSpaces(line) > 0)
             printf("%s\n", line);
     }
-    
+
 
     return 0;
 }
@@ -82,15 +82,15 @@ int removeTrailSpaces(char input[])
     //traverse to the end of the input line
     for(i = 0; input[i] != '\0'; ++i)
         ;
-    
+
     //i is placed at null position
     //now we have to traverse in the reverse manner to ignore all the spaces until we meet a character
-    for( spaces_removed = 0; (input[i] == ' ') || (input[i] == '\t') ; ++spaces_removed, --i) 
+    for( spaces_removed = 0; (input[i] == ' ') || (input[i] == '\t') ; ++spaces_removed, --i)
         ;
 
     //i i now placed at the string's last character's positon
     input[i + 1] = '\0';// if at all we pass the string to the printf, then it shall read until this NULL character
-    
+
     printf(" number of spaces removed are = %d and i = %d\n", spaces_removed, i);
     return i;
 } */
